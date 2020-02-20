@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,8 +17,12 @@
 		E2319F6623FC769A00EAE7C7 /* RubyConvertAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319F6523FC769A00EAE7C7 /* RubyConvertAppTests.swift */; };
 		E2319F7123FC769B00EAE7C7 /* RubyConvertAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319F7023FC769B00EAE7C7 /* RubyConvertAppUITests.swift */; };
 		E2319F8823FC875F00EAE7C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319F8723FC875F00EAE7C7 /* Constants.swift */; };
-		E2319F8D23FC885800EAE7C7 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2319F8C23FC885800EAE7C7 /* HomeViewController.storyboard */; };
-		E2319F8F23FC888400EAE7C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319F8E23FC888400EAE7C7 /* HomeViewController.swift */; };
+		E2319F9D23FEE37500EAE7C7 /* GooAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319F9C23FEE37500EAE7C7 /* GooAPI.swift */; };
+		E2319F9F23FEE46C00EAE7C7 /* RubyConvertController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2319F9E23FEE46C00EAE7C7 /* RubyConvertController.storyboard */; };
+		E2319FA123FEE48E00EAE7C7 /* RubyConvertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319FA023FEE48E00EAE7C7 /* RubyConvertController.swift */; };
+		E2319FA323FEE4D400EAE7C7 /* RubyConvertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319FA223FEE4D400EAE7C7 /* RubyConvertViewModel.swift */; };
+		E2319FA623FEEA0500EAE7C7 /* GooAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319FA523FEEA0500EAE7C7 /* GooAPIService.swift */; };
+		E2319FAA23FEEC3600EAE7C7 /* RubyConvertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319FA923FEEC3600EAE7C7 /* RubyConvertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +64,12 @@
 		E2319F7023FC769B00EAE7C7 /* RubyConvertAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyConvertAppUITests.swift; sourceTree = "<group>"; };
 		E2319F7223FC769B00EAE7C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2319F8723FC875F00EAE7C7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E2319F8C23FC885800EAE7C7 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
-		E2319F8E23FC888400EAE7C7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E2319F9C23FEE37500EAE7C7 /* GooAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooAPI.swift; sourceTree = "<group>"; };
+		E2319F9E23FEE46C00EAE7C7 /* RubyConvertController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RubyConvertController.storyboard; sourceTree = "<group>"; };
+		E2319FA023FEE48E00EAE7C7 /* RubyConvertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyConvertController.swift; sourceTree = "<group>"; };
+		E2319FA223FEE4D400EAE7C7 /* RubyConvertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyConvertViewModel.swift; sourceTree = "<group>"; };
+		E2319FA523FEEA0500EAE7C7 /* GooAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooAPIService.swift; sourceTree = "<group>"; };
+		E2319FA923FEEC3600EAE7C7 /* RubyConvertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyConvertView.swift; sourceTree = "<group>"; };
 		E56BDADAFE9E958A0F4AA11C /* Pods-RubyConvertApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubyConvertApp.debug.xcconfig"; path = "Target Support Files/Pods-RubyConvertApp/Pods-RubyConvertApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +111,6 @@
 				5F6F977E40A139856737FC3D /* Pods-RubyConvertAppTests.debug.xcconfig */,
 				7B5BA326014803D1B0621619 /* Pods-RubyConvertAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,8 +149,11 @@
 		E2319F4D23FC769700EAE7C7 /* RubyConvertApp */ = {
 			isa = PBXGroup;
 			children = (
+				E2319FA823FEEC2600EAE7C7 /* Views */,
+				E2319F9B23FEE33700EAE7C7 /* Models */,
+				E2319F9A23FEE33000EAE7C7 /* ViewModels */,
 				E2319F8423FC870700EAE7C7 /* Controllers */,
-				E2319F8323FC86D500EAE7C7 /* Extensions */,
+				E2319FA423FEE51600EAE7C7 /* Extensions */,
 				E2319F8223FC86CB00EAE7C7 /* Constants */,
 				E2319F4E23FC769700EAE7C7 /* AppDelegate.swift */,
 				E2319F5023FC769700EAE7C7 /* SceneDelegate.swift */,
@@ -180,34 +190,27 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		E2319F8323FC86D500EAE7C7 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		E2319F8423FC870700EAE7C7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E2319F8923FC880100EAE7C7 /* Home */,
+				E2319F8923FC880100EAE7C7 /* RubyConvert */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		E2319F8923FC880100EAE7C7 /* Home */ = {
+		E2319F8923FC880100EAE7C7 /* RubyConvert */ = {
 			isa = PBXGroup;
 			children = (
 				E2319F8B23FC883A00EAE7C7 /* Storyboard */,
 				E2319F8A23FC881800EAE7C7 /* Source */,
 			);
-			path = Home;
+			path = RubyConvert;
 			sourceTree = "<group>";
 		};
 		E2319F8A23FC881800EAE7C7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				E2319F8E23FC888400EAE7C7 /* HomeViewController.swift */,
+				E2319FA023FEE48E00EAE7C7 /* RubyConvertController.swift */,
 			);
 			name = Source;
 			path = ../../Source;
@@ -216,9 +219,49 @@
 		E2319F8B23FC883A00EAE7C7 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				E2319F8C23FC885800EAE7C7 /* HomeViewController.storyboard */,
+				E2319F9E23FEE46C00EAE7C7 /* RubyConvertController.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E2319F9A23FEE33000EAE7C7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E2319FA223FEE4D400EAE7C7 /* RubyConvertViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E2319F9B23FEE33700EAE7C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2319FA723FEEBF300EAE7C7 /* API */,
+				E2319FA523FEEA0500EAE7C7 /* GooAPIService.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E2319FA423FEE51600EAE7C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E2319FA723FEEBF300EAE7C7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E2319F9C23FEE37500EAE7C7 /* GooAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E2319FA823FEEC2600EAE7C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E2319FA923FEEC3600EAE7C7 /* RubyConvertView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,9 +373,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2319F9F23FEE46C00EAE7C7 /* RubyConvertController.storyboard in Resources */,
 				E2319F5B23FC769A00EAE7C7 /* LaunchScreen.storyboard in Resources */,
 				E2319F5823FC769A00EAE7C7 /* Assets.xcassets in Resources */,
-				E2319F8D23FC885800EAE7C7 /* HomeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,10 +503,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2319F9D23FEE37500EAE7C7 /* GooAPI.swift in Sources */,
 				E2319F4F23FC769700EAE7C7 /* AppDelegate.swift in Sources */,
 				E2319F5123FC769700EAE7C7 /* SceneDelegate.swift in Sources */,
+				E2319FA623FEEA0500EAE7C7 /* GooAPIService.swift in Sources */,
+				E2319FA123FEE48E00EAE7C7 /* RubyConvertController.swift in Sources */,
+				E2319FA323FEE4D400EAE7C7 /* RubyConvertViewModel.swift in Sources */,
+				E2319FAA23FEEC3600EAE7C7 /* RubyConvertView.swift in Sources */,
 				E2319F8823FC875F00EAE7C7 /* Constants.swift in Sources */,
-				E2319F8F23FC888400EAE7C7 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
