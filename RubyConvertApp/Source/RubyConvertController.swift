@@ -9,11 +9,14 @@
 import UIKit
 
 class RubyConvertController: UIViewController {
+    
+    private let service = GooAPIService.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        service.fetch(sentence: "楽しかったインターン生活")
     }
     
 
