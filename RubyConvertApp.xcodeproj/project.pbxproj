@@ -23,6 +23,7 @@
 		E2319FA323FEE4D400EAE7C7 /* RubyConvertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319FA223FEE4D400EAE7C7 /* RubyConvertViewModel.swift */; };
 		E2319FA623FEEA0500EAE7C7 /* GooAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319FA523FEEA0500EAE7C7 /* GooAPIService.swift */; };
 		E2319FAA23FEEC3600EAE7C7 /* RubyConvertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319FA923FEEC3600EAE7C7 /* RubyConvertView.swift */; };
+		E2319FAC2401958500EAE7C7 /* ConvertedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319FAB2401958500EAE7C7 /* ConvertedResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		E2319FA223FEE4D400EAE7C7 /* RubyConvertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyConvertViewModel.swift; sourceTree = "<group>"; };
 		E2319FA523FEEA0500EAE7C7 /* GooAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooAPIService.swift; sourceTree = "<group>"; };
 		E2319FA923FEEC3600EAE7C7 /* RubyConvertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyConvertView.swift; sourceTree = "<group>"; };
+		E2319FAB2401958500EAE7C7 /* ConvertedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertedResult.swift; sourceTree = "<group>"; };
 		E56BDADAFE9E958A0F4AA11C /* Pods-RubyConvertApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubyConvertApp.debug.xcconfig"; path = "Target Support Files/Pods-RubyConvertApp/Pods-RubyConvertApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				E2319F9C23FEE37500EAE7C7 /* GooAPI.swift */,
+				E2319FAB2401958500EAE7C7 /* ConvertedResult.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2319FAC2401958500EAE7C7 /* ConvertedResult.swift in Sources */,
 				E2319F9D23FEE37500EAE7C7 /* GooAPI.swift in Sources */,
 				E2319F4F23FC769700EAE7C7 /* AppDelegate.swift in Sources */,
 				E2319F5123FC769700EAE7C7 /* SceneDelegate.swift in Sources */,
