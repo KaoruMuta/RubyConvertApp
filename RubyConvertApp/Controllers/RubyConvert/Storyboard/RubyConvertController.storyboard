@@ -121,6 +121,7 @@
                     <connections>
                         <outlet property="clearButton" destination="gZR-k7-r2O" id="WrN-uh-Pf1"/>
                         <outlet property="confirmButton" destination="gZR-k7-r2O" id="Gbe-Bd-kgN"/>
+                        <outlet property="confirmButton" destination="sUD-u8-MGL" id="YVg-lZ-e94"/>
                         <outlet property="entryField" destination="ABc-IO-bTT" id="y3y-Ve-QUy"/>
                         <outlet property="explanationLabel" destination="KlU-49-Vtp" id="Ccs-P4-NPi"/>
                         <outlet property="licenseImageView" destination="oPo-bh-cfp" id="ugF-ZK-HX5"/>

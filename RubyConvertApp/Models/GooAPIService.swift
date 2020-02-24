@@ -6,12 +6,10 @@
 //  Copyright © 2020 muta. All rights reserved.
 //
 
-import Foundation
+import RxSwift
 import Moya
 
 final class GooAPIService {
-    
-    static let shared = GooAPIService()
     
     public func fetch(sentence: String) {
         let provider = MoyaProvider<GooAPI>()

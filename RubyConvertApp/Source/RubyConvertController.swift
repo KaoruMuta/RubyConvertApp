@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class RubyConvertController: UIViewController {
+final class RubyConvertController: UIViewController {
     
     @IBOutlet private weak var explanationLabel: UILabel!
     @IBOutlet private weak var resultLabel: UILabel!
@@ -19,7 +19,7 @@ class RubyConvertController: UIViewController {
     @IBOutlet private weak var clearButton: UIButton!
     @IBOutlet private weak var licenseImageView: UIImageView!
     
-    private let service = GooAPIService.shared
+    fileprivate let viewModel = RubyConvertViewModel()
     
     private let disposeBag = DisposeBag()
 
@@ -30,15 +30,43 @@ class RubyConvertController: UIViewController {
         entryField.delegate = self
         
         setUI()
-        // bind()
+        bind()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureObserver()
     }
-
-    func configureObserver() {
+    
+    private func bind() {
+        viewModel.convertedWord
+            .asObservable()
+            .bind(to: resultLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        confirmButton.rx.tap
+            .subscribe { [unowned self] _ in
+                self.entryField.resignFirstResponder()
+                guard let inputWord = self.entryField.text else { return }
+                self.viewModel.fetchDataWithInputWord(sentence: inputWord)
+            }.disposed(by: disposeBag)
+        
+        clearButton.rx.tap
+            .subscribe { [unowned self] _ in
+                self.entryField.resignFirstResponder()
+                self.viewModel.convertedWord.accept("")
+                self.entryField.text = ""
+            }.disposed(by: disposeBag)
+    }
+    
+    private func setUI() {
+        entryField.delegate = self
+        explanationLabel.text = Message.explanation
+        resultLabel.text = ""
+        licenseImageView.setImageByURL(url: Resources.licenseImageUrl)
+    }
+    
+    private func configureObserver() {
         let notification = NotificationCenter.default
         notification.addObserver(self, selector: #selector(keyboardWillShow(_:)),
                                  name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -46,7 +74,6 @@ class RubyConvertController: UIViewController {
                                  name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    /// キーボードが表示時に画面をずらす。
     @objc func keyboardWillShow(_ notification: Notification?) {
         guard let rect = (notification?.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
             let duration = notification?.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
@@ -56,7 +83,6 @@ class RubyConvertController: UIViewController {
         }
     }
 
-    /// キーボードが降りたら画面を戻す
     @objc func keyboardWillHide(_ notification: Notification?) {
         guard let duration = notification?.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? TimeInterval else { return }
         UIView.animate(withDuration: duration) {
@@ -64,29 +90,9 @@ class RubyConvertController: UIViewController {
         }
     }
     
-    private func setUI() {
-        explanationLabel.text = Message.explanation
-        resultLabel.text = ""
-        licenseImageView.setImageByURL(url: Resources.licenseImageUrl)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-    
-    /*
-    private func bind() {
-        entryField.rx.text.orEmpty.asObservable()
-            .subscribe { [weak self] in
-        }.disposed(by: disposeBag)
-    }*/
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension RubyConvertController: UITextFieldDelegate {

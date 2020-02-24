@@ -6,7 +6,7 @@ target 'RubyConvertApp' do
   use_frameworks!
 
   # Pods for RubyConvertApp
-  pod 'Moya'
+  pod 'Moya/RxSwift', '~> 14.0'
   pod 'RxSwift'
   pod 'RxCocoa'
 

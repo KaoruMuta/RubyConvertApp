@@ -24,8 +24,6 @@
 		E2319F9F23FEE46C00EAE7C7 /* RubyConvertController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2319F9E23FEE46C00EAE7C7 /* RubyConvertController.storyboard */; };
 		E2319FA123FEE48E00EAE7C7 /* RubyConvertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319FA023FEE48E00EAE7C7 /* RubyConvertController.swift */; };
 		E2319FA323FEE4D400EAE7C7 /* RubyConvertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319FA223FEE4D400EAE7C7 /* RubyConvertViewModel.swift */; };
-		E2319FA623FEEA0500EAE7C7 /* GooAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319FA523FEEA0500EAE7C7 /* GooAPIService.swift */; };
-		E2319FAA23FEEC3600EAE7C7 /* RubyConvertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319FA923FEEC3600EAE7C7 /* RubyConvertView.swift */; };
 		E2319FAC2401958500EAE7C7 /* ConvertedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319FAB2401958500EAE7C7 /* ConvertedResult.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,8 +73,6 @@
 		E2319F9E23FEE46C00EAE7C7 /* RubyConvertController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RubyConvertController.storyboard; sourceTree = "<group>"; };
 		E2319FA023FEE48E00EAE7C7 /* RubyConvertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyConvertController.swift; sourceTree = "<group>"; };
 		E2319FA223FEE4D400EAE7C7 /* RubyConvertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyConvertViewModel.swift; sourceTree = "<group>"; };
-		E2319FA523FEEA0500EAE7C7 /* GooAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooAPIService.swift; sourceTree = "<group>"; };
-		E2319FA923FEEC3600EAE7C7 /* RubyConvertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyConvertView.swift; sourceTree = "<group>"; };
 		E2319FAB2401958500EAE7C7 /* ConvertedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertedResult.swift; sourceTree = "<group>"; };
 		E56BDADAFE9E958A0F4AA11C /* Pods-RubyConvertApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubyConvertApp.debug.xcconfig"; path = "Target Support Files/Pods-RubyConvertApp/Pods-RubyConvertApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -262,7 +258,6 @@
 			isa = PBXGroup;
 			children = (
 				E2319FA723FEEBF300EAE7C7 /* API */,
-				E2319FA523FEEA0500EAE7C7 /* GooAPIService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -274,14 +269,6 @@
 				E2319FAB2401958500EAE7C7 /* ConvertedResult.swift */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		E2319FA823FEEC2600EAE7C7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				E2319FA923FEEC3600EAE7C7 /* RubyConvertView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,6 +520,8 @@
 				E2319FA123FEE48E00EAE7C7 /* RubyConvertController.swift in Sources */,
 				E2319FA323FEE4D400EAE7C7 /* RubyConvertViewModel.swift in Sources */,
 				E2319FAA23FEEC3600EAE7C7 /* RubyConvertView.swift in Sources */,
+				E2319FA123FEE48E00EAE7C7 /* RubyConvertController.swift in Sources */,
+				E2319FA323FEE4D400EAE7C7 /* RubyConvertViewModel.swift in Sources */,
 				E229AFA62403AEEF006D779A /* IBDesignable+IBInspectable.swift in Sources */,
 				E2319F8823FC875F00EAE7C7 /* Constants.swift in Sources */,
 			);
