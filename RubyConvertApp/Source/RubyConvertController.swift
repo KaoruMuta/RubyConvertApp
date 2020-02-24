@@ -44,12 +44,14 @@ final class RubyConvertController: UIViewController {
         
         confirmButton.rx.tap
             .subscribe { [unowned self] _ in
+                self.entryField.resignFirstResponder()
                 guard let inputWord = self.entryField.text else { return }
                 self.viewModel.fetchDataWithInputWord(sentence: inputWord)
             }.disposed(by: disposeBag)
         
         clearButton.rx.tap
             .subscribe { [unowned self] _ in
+                self.entryField.resignFirstResponder()
                 self.viewModel.convertedWord.accept("")
                 self.entryField.text = ""
             }.disposed(by: disposeBag)
