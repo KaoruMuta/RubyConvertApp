@@ -8,19 +8,75 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class RubyConvertController: UIViewController {
     
+    @IBOutlet private weak var explanationLabel: UILabel!
+    @IBOutlet private weak var resultLabel: UILabel!
+    @IBOutlet private weak var entryField: UITextField!
+    @IBOutlet private weak var confirmButton: UIButton!
+    @IBOutlet private weak var clearButton: UIButton!
+    @IBOutlet private weak var licenseImageView: UIImageView!
+    
     private let service = GooAPIService()
     private let viewModel = RubyConvertViewModel()
+    
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        service.fetch(sentence: "楽しかったインターン生活")
+        entryField.delegate = self
+        
+        setUI()
+        // bind()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureObserver()
+    }
+
+    func configureObserver() {
+        let notification = NotificationCenter.default
+        notification.addObserver(self, selector: #selector(keyboardWillShow(_:)),
+                                 name: UIResponder.keyboardWillShowNotification, object: nil)
+        notification.addObserver(self, selector: #selector(keyboardWillHide(_:)),
+                                 name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    /// キーボードが表示時に画面をずらす。
+    @objc func keyboardWillShow(_ notification: Notification?) {
+        guard let rect = (notification?.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
+            let duration = notification?.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
+        UIView.animate(withDuration: duration) {
+            let transform = CGAffineTransform(translationX: 0, y: -(rect.size.height))
+            self.view.transform = transform
+        }
+    }
+
+    /// キーボードが降りたら画面を戻す
+    @objc func keyboardWillHide(_ notification: Notification?) {
+        guard let duration = notification?.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? TimeInterval else { return }
+        UIView.animate(withDuration: duration) {
+            self.view.transform = CGAffineTransform.identity
+        }
+    }
+    
+    private func setUI() {
+        explanationLabel.text = Message.explanation
+        resultLabel.text = ""
+        licenseImageView.setImageByURL(url: Resources.licenseImageUrl)
+    }
+    
+    /*
+    private func bind() {
+        entryField.rx.text.orEmpty.asObservable()
+            .subscribe { [weak self] in
+        }.disposed(by: disposeBag)
+    }*/
 
     /*
     // MARK: - Navigation
@@ -32,4 +88,12 @@ class RubyConvertController: UIViewController {
     }
     */
 
+}
+
+extension RubyConvertController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

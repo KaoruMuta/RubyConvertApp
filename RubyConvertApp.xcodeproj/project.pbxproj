@@ -10,6 +10,9 @@
 		02A76600903224B2344F144E /* Pods_RubyConvertApp_RubyConvertAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FC073974A7E74DE36591EC /* Pods_RubyConvertApp_RubyConvertAppUITests.framework */; };
 		124E0A96A7782C23057D9CE2 /* Pods_RubyConvertApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 557BFE2B681A970CA4886790 /* Pods_RubyConvertApp.framework */; };
 		52FDD0910B112ABF549FC886 /* Pods_RubyConvertAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2388D7CA5B80CD16626B6AB4 /* Pods_RubyConvertAppTests.framework */; };
+		E229AFA62403AEEF006D779A /* IBDesignable+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E229AFA52403AEEF006D779A /* IBDesignable+IBInspectable.swift */; };
+		E229AFA92403B0E8006D779A /* Toppan Bunkyu Midashi Gothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E229AFA82403B0E8006D779A /* Toppan Bunkyu Midashi Gothic.otf */; };
+		E229AFAB2403BB5A006D779A /* UIImageView+setImageByURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E229AFAA2403BB5A006D779A /* UIImageView+setImageByURL.swift */; };
 		E2319F4F23FC769700EAE7C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319F4E23FC769700EAE7C7 /* AppDelegate.swift */; };
 		E2319F5123FC769700EAE7C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2319F5023FC769700EAE7C7 /* SceneDelegate.swift */; };
 		E2319F5823FC769A00EAE7C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2319F5723FC769A00EAE7C7 /* Assets.xcassets */; };
@@ -52,6 +55,9 @@
 		7B5BA326014803D1B0621619 /* Pods-RubyConvertAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubyConvertAppTests.release.xcconfig"; path = "Target Support Files/Pods-RubyConvertAppTests/Pods-RubyConvertAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		B4FC073974A7E74DE36591EC /* Pods_RubyConvertApp_RubyConvertAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RubyConvertApp_RubyConvertAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D731EBAA80B0D0696F112EDD /* Pods-RubyConvertApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubyConvertApp.release.xcconfig"; path = "Target Support Files/Pods-RubyConvertApp/Pods-RubyConvertApp.release.xcconfig"; sourceTree = "<group>"; };
+		E229AFA52403AEEF006D779A /* IBDesignable+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IBDesignable+IBInspectable.swift"; sourceTree = "<group>"; };
+		E229AFA82403B0E8006D779A /* Toppan Bunkyu Midashi Gothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Toppan Bunkyu Midashi Gothic.otf"; path = "../../../../../OgiriBattleResources/goshic.otf/Toppan Bunkyu Midashi Gothic/Toppan Bunkyu Midashi Gothic.otf"; sourceTree = "<group>"; };
+		E229AFAA2403BB5A006D779A /* UIImageView+setImageByURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setImageByURL.swift"; sourceTree = "<group>"; };
 		E2319F4B23FC769700EAE7C7 /* RubyConvertApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RubyConvertApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2319F4E23FC769700EAE7C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2319F5023FC769700EAE7C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +132,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E229AFA42403AEDB006D779A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E229AFA52403AEEF006D779A /* IBDesignable+IBInspectable.swift */,
+				E229AFAA2403BB5A006D779A /* UIImageView+setImageByURL.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E229AFA72403B0D6006D779A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				E229AFA82403B0E8006D779A /* Toppan Bunkyu Midashi Gothic.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		E2319F4223FC769700EAE7C7 = {
 			isa = PBXGroup;
 			children = (
@@ -151,11 +174,12 @@
 		E2319F4D23FC769700EAE7C7 /* RubyConvertApp */ = {
 			isa = PBXGroup;
 			children = (
+				E229AFA72403B0D6006D779A /* Font */,
+				E229AFA42403AEDB006D779A /* Extensions */,
 				E2319FA823FEEC2600EAE7C7 /* Views */,
 				E2319F9B23FEE33700EAE7C7 /* Models */,
 				E2319F9A23FEE33000EAE7C7 /* ViewModels */,
 				E2319F8423FC870700EAE7C7 /* Controllers */,
-				E2319FA423FEE51600EAE7C7 /* Extensions */,
 				E2319F8223FC86CB00EAE7C7 /* Constants */,
 				E2319F4E23FC769700EAE7C7 /* AppDelegate.swift */,
 				E2319F5023FC769700EAE7C7 /* SceneDelegate.swift */,
@@ -241,13 +265,6 @@
 				E2319FA523FEEA0500EAE7C7 /* GooAPIService.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		E2319FA423FEE51600EAE7C7 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E2319FA723FEEBF300EAE7C7 /* API */ = {
@@ -376,6 +393,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E229AFA92403B0E8006D779A /* Toppan Bunkyu Midashi Gothic.otf in Resources */,
 				E2319F9F23FEE46C00EAE7C7 /* RubyConvertController.storyboard in Resources */,
 				E2319F5B23FC769A00EAE7C7 /* LaunchScreen.storyboard in Resources */,
 				E2319F5823FC769A00EAE7C7 /* Assets.xcassets in Resources */,
@@ -510,10 +528,12 @@
 				E2319F9D23FEE37500EAE7C7 /* GooAPI.swift in Sources */,
 				E2319F4F23FC769700EAE7C7 /* AppDelegate.swift in Sources */,
 				E2319F5123FC769700EAE7C7 /* SceneDelegate.swift in Sources */,
+				E229AFAB2403BB5A006D779A /* UIImageView+setImageByURL.swift in Sources */,
 				E2319FA623FEEA0500EAE7C7 /* GooAPIService.swift in Sources */,
 				E2319FA123FEE48E00EAE7C7 /* RubyConvertController.swift in Sources */,
 				E2319FA323FEE4D400EAE7C7 /* RubyConvertViewModel.swift in Sources */,
 				E2319FAA23FEEC3600EAE7C7 /* RubyConvertView.swift in Sources */,
+				E229AFA62403AEEF006D779A /* IBDesignable+IBInspectable.swift in Sources */,
 				E2319F8823FC875F00EAE7C7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
