@@ -172,10 +172,9 @@
 			children = (
 				E229AFA72403B0D6006D779A /* Font */,
 				E229AFA42403AEDB006D779A /* Extensions */,
-				E2319FA823FEEC2600EAE7C7 /* Views */,
 				E2319F9B23FEE33700EAE7C7 /* Models */,
 				E2319F9A23FEE33000EAE7C7 /* ViewModels */,
-				E2319F8423FC870700EAE7C7 /* Controllers */,
+				E2319F8423FC870700EAE7C7 /* Views */,
 				E2319F8223FC86CB00EAE7C7 /* Constants */,
 				E2319F4E23FC769700EAE7C7 /* AppDelegate.swift */,
 				E2319F5023FC769700EAE7C7 /* SceneDelegate.swift */,
@@ -212,21 +211,13 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		E2319F8423FC870700EAE7C7 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				E2319F8923FC880100EAE7C7 /* RubyConvert */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E2319F8923FC880100EAE7C7 /* RubyConvert */ = {
+		E2319F8423FC870700EAE7C7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				E2319F8B23FC883A00EAE7C7 /* Storyboard */,
 				E2319F8A23FC881800EAE7C7 /* Source */,
 			);
-			path = RubyConvert;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E2319F8A23FC881800EAE7C7 /* Source */ = {
@@ -234,8 +225,7 @@
 			children = (
 				E2319FA023FEE48E00EAE7C7 /* RubyConvertController.swift */,
 			);
-			name = Source;
-			path = ../../Source;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		E2319F8B23FC883A00EAE7C7 /* Storyboard */ = {
@@ -516,10 +506,8 @@
 				E2319F4F23FC769700EAE7C7 /* AppDelegate.swift in Sources */,
 				E2319F5123FC769700EAE7C7 /* SceneDelegate.swift in Sources */,
 				E229AFAB2403BB5A006D779A /* UIImageView+setImageByURL.swift in Sources */,
-				E2319FA623FEEA0500EAE7C7 /* GooAPIService.swift in Sources */,
 				E2319FA123FEE48E00EAE7C7 /* RubyConvertController.swift in Sources */,
 				E2319FA323FEE4D400EAE7C7 /* RubyConvertViewModel.swift in Sources */,
-				E2319FAA23FEEC3600EAE7C7 /* RubyConvertView.swift in Sources */,
 				E2319FA123FEE48E00EAE7C7 /* RubyConvertController.swift in Sources */,
 				E2319FA323FEE4D400EAE7C7 /* RubyConvertViewModel.swift in Sources */,
 				E229AFA62403AEEF006D779A /* IBDesignable+IBInspectable.swift in Sources */,
