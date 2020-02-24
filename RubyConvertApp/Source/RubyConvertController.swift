@@ -36,6 +36,25 @@ final class RubyConvertController: UIViewController {
         configureObserver()
     }
     
+    private func bind() {
+        viewModel.convertedWord
+            .asObservable()
+            .bind(to: resultLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        confirmButton.rx.tap
+            .subscribe { [unowned self] _ in
+                guard let inputWord = self.entryField.text else { return }
+                self.viewModel.fetchDataWithInputWord(sentence: inputWord)
+            }.disposed(by: disposeBag)
+        
+        clearButton.rx.tap
+            .subscribe { [unowned self] _ in
+                self.viewModel.convertedWord.accept("")
+                self.entryField.text = ""
+            }.disposed(by: disposeBag)
+    }
+    
     private func setUI() {
         entryField.delegate = self
         explanationLabel.text = Message.explanation
@@ -67,35 +86,9 @@ final class RubyConvertController: UIViewController {
         }
     }
     
-    private func bind() {
-        viewModel.convertedWord
-            .asObservable()
-            .bind(to: resultLabel.rx.text)
-            .disposed(by: disposeBag)
-        
-        confirmButton.rx.tap
-            .subscribe { [unowned self] _ in
-                guard let inputWord = self.entryField.text else { return }
-                self.viewModel.fetchDataWithInputWord(sentence: inputWord)
-            }.disposed(by: disposeBag)
-        
-        clearButton.rx.tap
-            .subscribe { [unowned self] _ in
-                self.viewModel.convertedWord.accept("")
-                self.entryField.text = ""
-            }.disposed(by: disposeBag)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension RubyConvertController: UITextFieldDelegate {
