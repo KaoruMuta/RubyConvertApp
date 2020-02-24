@@ -6,10 +6,6 @@
 //  Copyright © 2020 muta. All rights reserved.
 //
 
-import RxSwift
-
-final class RubyConvertViewModel {
-    
 import Moya
 import RxSwift
 import RxCocoa
