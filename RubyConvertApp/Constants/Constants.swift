@@ -14,3 +14,11 @@ struct Parameters {
     static let applicationId = "9d6eae08eb543de7737a5fea40b2b167007970e7c1b571b737e1b3714eccd694"
     static let outputType = "hiragana"
 }
+
+struct Resources {
+    static let licenseImageUrl = "http://u.xgoo.jp/img/sgoo.png"
+}
+
+struct Message {
+    static let explanation = "読めない文字を入力！（下に読み方が出ます）"
+}
