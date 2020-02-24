@@ -6,4 +6,8 @@
 //  Copyright © 2020 muta. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+
+final class RubyConvertViewModel {
+    
+}

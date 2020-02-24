@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RxSwift
 
 class RubyConvertController: UIViewController {
     
-    private let service = GooAPIService.shared
+    private let service = GooAPIService()
+    private let viewModel = RubyConvertViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
