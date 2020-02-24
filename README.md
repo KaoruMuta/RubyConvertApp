@@ -5,9 +5,9 @@
 MVVMを採用．現状はViewModelに通信の処理を任せ，ModelはAPIのレスポンスの型を持っている
 
 # 利用ライブラリ
-- RxSwift
-- RxCocoa
-- Moya
+- RxSwift(https://github.com/ReactiveX/RxSwift)
+- RxCocoa(https://github.com/ReactiveX/RxSwift)
+- Moya(https://github.com/Moya/Moya)
 
 # APIに関して
 こちらgooAPIを利用しています（https://labs.goo.ne.jp/api/jp/hiragana-translation/）
