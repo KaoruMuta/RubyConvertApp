@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.0.0)
+  - Alamofire (5.0.2)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -25,7 +25,7 @@ SPEC REPOS:
     - RxSwift
 
 SPEC CHECKSUMS:
-  Alamofire: 58ff2bfb8daaacaa233d5c36e37b10a5248f59b1
+  Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640

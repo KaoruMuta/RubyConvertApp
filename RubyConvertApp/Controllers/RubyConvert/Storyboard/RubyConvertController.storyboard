@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Toppan Bunkyu Midashi Gothic.otf">
+            <string>ToppanBunkyuMidashiGothicStdN-ExtraBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Ruby Convert Controller-->
         <scene sceneID="MPc-eu-AjW">
@@ -14,13 +19,117 @@
                     <view key="view" contentMode="scaleToFill" id="7Id-wi-yfq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="ここに文字を入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ABc-IO-bTT">
+                                <rect key="frame" x="74" y="418" width="266" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="LeS-ec-HzI"/>
+                                    <constraint firstAttribute="height" constant="60" id="OnK-xU-BQi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ToppanBunkyuMidashiGothicStdN-ExtraBold" family="Toppan Bunkyu Midashi Gothic" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.46666666670000001" blue="0.15684825899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="説明" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlU-49-Vtp">
+                                <rect key="frame" x="30" y="91" width="354" height="39"/>
+                                <fontDescription key="fontDescription" name="ToppanBunkyuMidashiGothicStdN-ExtraBold" family="Toppan Bunkyu Midashi Gothic" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oPo-bh-cfp">
+                                <rect key="frame" x="295" y="833" width="119" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="41Q-2W-lR7"/>
+                                    <constraint firstAttribute="width" constant="119" id="MNS-Ah-Pdf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZR-k7-r2O">
+                                <rect key="frame" x="92" y="683" width="230" height="80"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="pya-Jk-eEp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ToppanBunkyuMidashiGothicStdN-ExtraBold" family="Toppan Bunkyu Midashi Gothic" pointSize="20"/>
+                                <state key="normal" title="入力をクリア">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeK-vn-cWa">
+                                <rect key="frame" x="50" y="230" width="314" height="17"/>
+                                <fontDescription key="fontDescription" name="ToppanBunkyuMidashiGothicStdN-ExtraBold" family="Toppan Bunkyu Midashi Gothic" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUD-u8-MGL">
+                                <rect key="frame" x="92" y="578" width="230" height="80"/>
+                                <color key="backgroundColor" red="0.0" green="0.47450980390000003" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="sgq-zU-QON"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ToppanBunkyuMidashiGothicStdN-ExtraBold" family="Toppan Bunkyu Midashi Gothic" pointSize="20"/>
+                                <state key="normal" title="変換">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QXr-dW-eTx" firstAttribute="trailing" secondItem="gZR-k7-r2O" secondAttribute="trailing" constant="92" id="06S-sX-MG4"/>
+                            <constraint firstItem="aeK-vn-cWa" firstAttribute="leading" secondItem="QXr-dW-eTx" secondAttribute="leading" constant="50" id="1n2-Lm-gkw"/>
+                            <constraint firstItem="aeK-vn-cWa" firstAttribute="top" secondItem="KlU-49-Vtp" secondAttribute="bottom" constant="100" id="2Lr-S7-D5o"/>
+                            <constraint firstItem="QXr-dW-eTx" firstAttribute="trailing" secondItem="sUD-u8-MGL" secondAttribute="trailing" constant="92" id="6aN-UF-ME6"/>
+                            <constraint firstItem="QXr-dW-eTx" firstAttribute="trailing" secondItem="KlU-49-Vtp" secondAttribute="trailing" constant="30" id="7t7-XC-x6r"/>
+                            <constraint firstItem="gZR-k7-r2O" firstAttribute="leading" secondItem="QXr-dW-eTx" secondAttribute="leading" constant="92" id="99O-nv-bME"/>
+                            <constraint firstItem="aeK-vn-cWa" firstAttribute="centerX" secondItem="7Id-wi-yfq" secondAttribute="centerX" id="CKt-5U-CDG"/>
+                            <constraint firstItem="sUD-u8-MGL" firstAttribute="top" secondItem="ABc-IO-bTT" secondAttribute="bottom" constant="100" id="FrP-Bo-m5q"/>
+                            <constraint firstItem="ABc-IO-bTT" firstAttribute="centerY" secondItem="7Id-wi-yfq" secondAttribute="centerY" id="LOU-ap-v9g"/>
+                            <constraint firstAttribute="bottom" secondItem="oPo-bh-cfp" secondAttribute="bottom" id="XNc-tf-ZB5"/>
+                            <constraint firstItem="oPo-bh-cfp" firstAttribute="trailing" secondItem="QXr-dW-eTx" secondAttribute="trailing" id="Xvp-U5-kYE"/>
+                            <constraint firstItem="ABc-IO-bTT" firstAttribute="centerX" secondItem="7Id-wi-yfq" secondAttribute="centerX" id="XyU-AY-ZoJ"/>
+                            <constraint firstItem="QXr-dW-eTx" firstAttribute="trailing" secondItem="aeK-vn-cWa" secondAttribute="trailing" constant="50" id="ZNW-Kk-ZmG"/>
+                            <constraint firstItem="KlU-49-Vtp" firstAttribute="top" secondItem="QXr-dW-eTx" secondAttribute="top" constant="47" id="e07-2I-A7O"/>
+                            <constraint firstItem="KlU-49-Vtp" firstAttribute="leading" secondItem="QXr-dW-eTx" secondAttribute="leading" constant="30" id="f04-yy-pyR"/>
+                            <constraint firstItem="sUD-u8-MGL" firstAttribute="leading" secondItem="QXr-dW-eTx" secondAttribute="leading" constant="92" id="kEC-Kb-BoA"/>
+                            <constraint firstItem="KlU-49-Vtp" firstAttribute="centerX" secondItem="7Id-wi-yfq" secondAttribute="centerX" id="rG9-le-c77"/>
+                            <constraint firstItem="gZR-k7-r2O" firstAttribute="top" secondItem="sUD-u8-MGL" secondAttribute="bottom" constant="25" id="xmR-eu-0BD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QXr-dW-eTx"/>
                     </view>
+                    <connections>
+                        <outlet property="clearButton" destination="gZR-k7-r2O" id="WrN-uh-Pf1"/>
+                        <outlet property="confirmButton" destination="gZR-k7-r2O" id="Gbe-Bd-kgN"/>
+                        <outlet property="entryField" destination="ABc-IO-bTT" id="y3y-Ve-QUy"/>
+                        <outlet property="explanationLabel" destination="KlU-49-Vtp" id="Ccs-P4-NPi"/>
+                        <outlet property="licenseImageView" destination="oPo-bh-cfp" id="ugF-ZK-HX5"/>
+                        <outlet property="resultLabel" destination="aeK-vn-cWa" id="Kws-YB-Sh8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0P7-8t-m2x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="232" y="161"/>
+            <point key="canvasLocation" x="231.8840579710145" y="160.04464285714286"/>
         </scene>
     </scenes>
 </document>
