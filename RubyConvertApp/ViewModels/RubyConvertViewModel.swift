@@ -8,7 +8,7 @@
 
 import Moya
 import RxSwift
-import RxCocoa
+import RxRelay
 
 final class RubyConvertViewModel {
     

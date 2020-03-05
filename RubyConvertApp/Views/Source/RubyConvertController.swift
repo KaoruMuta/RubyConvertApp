@@ -27,15 +27,9 @@ final class RubyConvertController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        entryField.delegate = self
-        
         setUI()
-        bind()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         configureObserver()
+        bind()
     }
     
     private func bind() {
