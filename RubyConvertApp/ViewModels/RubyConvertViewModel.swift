@@ -8,7 +8,7 @@
 
 import Moya
 import RxSwift
-import RxCocoa
+import RxRelay
 
 final class RubyConvertViewModel {
     
@@ -29,6 +29,10 @@ final class RubyConvertViewModel {
             }, onError: { (error) in
                 print(error)
             }).disposed(by: disposeBag)
+    }
+    
+    public func clearText() {
+        convertedWord.accept("")
     }
     
     
