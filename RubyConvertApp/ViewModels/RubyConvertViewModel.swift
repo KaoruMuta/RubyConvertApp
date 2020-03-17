@@ -31,5 +31,9 @@ final class RubyConvertViewModel {
             }).disposed(by: disposeBag)
     }
     
+    public func clearText() {
+        convertedWord.accept("")
+    }
+    
     
 }

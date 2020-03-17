@@ -48,7 +48,7 @@ final class RubyConvertController: UIViewController {
         clearButton.rx.tap
             .subscribe { [unowned self] _ in
                 self.entryField.resignFirstResponder()
-                self.viewModel.convertedWord.accept("")
+                self.viewModel.clearText()
                 self.entryField.text = ""
             }.disposed(by: disposeBag)
     }
@@ -61,14 +61,14 @@ final class RubyConvertController: UIViewController {
     }
     
     private func configureObserver() {
-        let notification = NotificationCenter.default
-        notification.addObserver(self, selector: #selector(keyboardWillShow(_:)),
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow),
                                  name: UIResponder.keyboardWillShowNotification, object: nil)
-        notification.addObserver(self, selector: #selector(keyboardWillHide(_:)),
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide),
                                  name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-
-    @objc func keyboardWillShow(_ notification: Notification?) {
+    
+    // MARK: - keyboardWillShow
+    @objc private func keyboardWillShow(_ notification: Notification?) {
         guard let rect = (notification?.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
             let duration = notification?.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
         UIView.animate(withDuration: duration) {
@@ -76,21 +76,22 @@ final class RubyConvertController: UIViewController {
             self.view.transform = transform
         }
     }
-
-    @objc func keyboardWillHide(_ notification: Notification?) {
+    
+    // MARK: - keyboardWillHide
+    @objc private func keyboardWillHide(_ notification: Notification?) {
         guard let duration = notification?.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? TimeInterval else { return }
         UIView.animate(withDuration: duration) {
             self.view.transform = CGAffineTransform.identity
         }
     }
     
+    // MARK: - touchesBegan
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
 }
 
 extension RubyConvertController: UITextFieldDelegate {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
